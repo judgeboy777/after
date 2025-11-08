@@ -25,3 +25,11 @@ app.get('/url',(req,res)=>{
 app.listen(3000,() => {
   console.log('server is running in http://localhost:3000');
 })
+COMPILATION & EXECUTION:
+To compile and execute the above Express.js program, follow these simple steps:
+✅ Step-by-Step Instructions
+1. Install Node.js
+ Download and install from: https://nodejs.org
+ Verify installation in terminal/command prompt:
+node -v
+npm -v 
