@@ -37,3 +37,8 @@ class Box<T> {
 }
 const stringBox = new Box<string>("Generic Box");
 console.log("Box Value:", stringBox.getValue());
+Steps to Run:
+1. Save your code in a file like 2F.ts
+2. Compile it: tsc 2F.ts
+It will generate a types.js file.
+3. Run it with Node.js: node 2F.js 
