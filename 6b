@@ -23,3 +23,27 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => res.render('form', { username: null }));
 app.post('/', (req, res) => res.render('form', { username: req.body.username }));
 app.listen(3000, () => console.log('Server running at http://localhost:3000')); 
+
+B) AIM: Write a program to work with form data.
+Step 1: Create a views folder
+Make sure the directory C:\Users\ksbam\my-express-app\views exists.
+If it doesn’t:
+1. Open your project folder.
+2. Create a folder named views.
+✅ Step 2: Create the form view file
+Inside the views folder, add a file named:
+ If you're using EJS: form.ejs 
+✅ Step 3: Check your app settings
+Ensure your Express app sets the views and view engine correctly in 4b.js:
+📄 4b.js
+ ✅ Step 4: Install EJS if not installed
+Type the following commands in command prompt
+npm init -y
+npm install ejs
+npm install express ejs body-parser
+✅ Step 5: Run the app
+Start your server:
+node 4b.js
+Then visit:
+👉 http://localhost:3000
+You should see your form. 
