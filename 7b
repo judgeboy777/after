@@ -45,3 +45,14 @@ app.get('/logout', (req, res) => {
 app.listen(PORT, () => {
  console.log(`Server running at http://localhost:${PORT}`);
 }); 
+
+Execution Steps:
+1. node -v
+2. npm -v
+Setup Instructions
+First, install dependencies:
+3. npm list express (if version number is shown as empty u have to install express) i.e, --
+npm install express
+4. npm install express ejs body-parser
+5. npm install express express-session
+6. npm init -y 
