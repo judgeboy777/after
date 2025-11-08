@@ -9,3 +9,9 @@ namespace MathUtils {
 // Using the namespace
 console.log("Namespace Add:", MathUtils.add(10, 5));
 console.log("Namespace Subtract:", MathUtils.subtract(10, 5));
+Steps to Run:
+1. Save your code in a file like 2e.ts
+2. Compile it: tsc 2e.ts
+It will generate a types.js file.
+3. Run it with Node.js: node 2e.js 
+
