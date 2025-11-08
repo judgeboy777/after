@@ -1,0 +1,23 @@
+const express = require('express');
+const app = express();
+
+// Logger middleware
+const loggerMiddleWare = (req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+};
+app.use(loggerMiddleWare);
+
+// Routes
+app.get('/', (req, res) => {
+  res.send('Hello, this is the home page');
+});
+
+app.get('/about', (req, res) => {
+  res.send('Hello, this is the about page');
+});
+
+// Server
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});
