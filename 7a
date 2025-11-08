@@ -27,3 +27,19 @@ app.get('/logout', (req, res) => {
 app.listen(3000, () => {
  console.log('http://localhost:3000');
 });
+
+🔗 How to Use Execute :
+Steps:
+1. node -v
+2. npm -v
+Setup Instructions
+First, install dependencies:
+1. npm list express
+2. npm install express express-session
+3. npm init -y
+Check if express-session is installed locally:
+npm list express-session
+1. Visit http://localhost:3000/login → Session created
+2. Visit http://localhost:3000/profile → Shows username
+3. Visit http://localhost:3000/logout → Session destroyed
+4. Visit /profile again → Asks to login again
