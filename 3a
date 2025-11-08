@@ -1,0 +1,27 @@
+const express = require('express');
+const app = express();
+
+//basic route
+app.get('/',(req,res)=>{
+  res.send('this is home page');
+})
+
+//router with para
+app.get('/user/:name',(req,res)=>{
+  const username = req.params.name;
+  res.send(`Hello!,${username}`);
+})
+//hangling router
+app.get('/search',(req,res)=>{
+  const keyword = req.query.q;
+  res.send(`searched for ${keyword}`)
+});
+//fullurl
+app.get('/url',(req,res)=>{
+  const fullurl = req.protocol+'://'+req.get('host')+req.originalUrl;
+  res.send(`Full url:,${fullurl}`)
+});
+//server
+app.listen(3000,() => {
+  console.log('server is running in http://localhost:3000');
+})
