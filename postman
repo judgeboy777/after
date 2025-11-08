@@ -1,0 +1,31 @@
+Working with Postman
+Using Postman (Graphical Tool)
+🔧 Setup
+Download & install Postman from https://www.postman.com/downloads
+✅ A. POST – Add Data
+➕ Add Resource (POST)
+URL:http://localhost:3000/resources
+Method: POST
+Body:
+Go to the "Body" tab
+Select raw and choose JSON
+Enter this JSON:
+{
+ "id": "1",
+ "name": "Book"
+}
+Click"Send"
+→ Should respond: Item added.
+✅ B. GET – Retrieve Data
+Method: GET
+URL: http://localhost:3000/resources
+Click"Send"
+→ You’ll get the full list of items.
+http://localhost:3000/resources---
+ {copy this URL in browser & see the result}
+✅ C. DELETE – Delete by Name
+Delete Resource (DELETE)
+URL:http://localhost:3000/resources/1
+Method: DELETE
+Click"Send"
+→ Should respond: Item with name 'pen' deleted. 
