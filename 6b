@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Form</title>
+</head>
+<body>
+ <h1>Sample Form</h1>
+ <form method="post">
+ <input type="text" name="username" placeholder="Enter name" />
+ <button type="submit">Submit</button>
+ </form>
+ <% if (username) { %>
+ <h2>You entered: <%= username %></h2>
+ <% } %>
+</body>
+</html> 
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => res.render('form', { username: null }));
+app.post('/', (req, res) => res.render('form', { username: req.body.username }));
+app.listen(3000, () => console.log('Server running at http://localhost:3000')); 
