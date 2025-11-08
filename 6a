@@ -19,7 +19,33 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
  console.log('Server running at http://localhost:3000');
 });
+
 Run the app:
 node 4a.js
 Open in your browser :
 http://localhost:3000
+How it Works in Express:
+1. You set EJS as the view engine:
+app.set('view engine', 'ejs');
+2. Place .ejs files in the /views folder.
+3. Use res.render('filename', data) to render the template with dynamic data.
+In web development, render means:
+🟢 To generate and send a final HTML page to the client (browser), often using a template
+and dynamic data.
+Example: index.ejs
+Step 1: Check Your Views Directory Structure
+Make sure you have this folder and file:
+C:\Users\ksbam\my-express-app\views\index.ejs
+ ✅ views folder must exist
+ ✅ index.ejs file must be inside the views folder
+If you're using .ejs, the filename should be: index.ejs
+Step 2: Check That EJS Is Installed
+Run this command in your project directory:
+npm init -y
+npm install ejs
+🔹 Step 3: Set the View Engine in 4A.js
+Make sure you have the correct configuration at the top of your 4A.js: 
+Run the app:
+node 4a.js
+Open in your browser :
+http://localhost:3000 
